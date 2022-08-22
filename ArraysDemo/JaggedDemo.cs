@@ -34,15 +34,26 @@ namespace ArraysDemo
             jagged_third[2] = new int[] { 2, 3 };
             jagged_third[3] = new int[] { 1000, 2000, 3000, 4000 };
 
-            for (int n = 0; n < jagged_third.Length; n++)
+            //for (int n = 0; n < jagged_third.Length; n++)
+            //{
+            //    Console.WriteLine("Row ({0})  ", n);
+            //    for (int i = 0; i < jagged_third[n].Length; i++)
+            //    {
+            //        Console.Write(jagged_third[n][i] +"\t " );
+            //    }
+            //    Console.WriteLine();
+
+            //}
+
+
+            foreach (var item in jagged_third)
             {
-                Console.WriteLine("Row ({0})  ", n);
-                for (int i = 0; i < jagged_third[n].Length; i++)
+                Console.WriteLine("Row ({0})  ", item);
+                foreach (var i in item)
                 {
-                    Console.Write(jagged_third[n][i] +"\t " );
+                    Console.WriteLine(i +" \t");
                 }
                 Console.WriteLine();
-
             }
 
             Console.Read();
